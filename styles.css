@@ -1,0 +1,171 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.magazine-cover {
+    position: relative;
+    width: 800px;
+    height: 1200px;
+    background-color: #fff;
+    border: 5px solid #ccc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-image {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    z-index: 2;
+}
+
+.content {
+    padding: 30px;
+}
+
+.article {
+    margin-bottom: 30px;
+}
+
+.headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.caption {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.subscribe-btn {
+    padding: 12px 25px;
+    background-color: #dc2b2b;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #ff4500;
+}
+
+.article:hover .headline {
+    color: #ff7f50;
+}
+
+.featured-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .magazine-cover {
+        width: 600px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .headline {
+        font-size: 1.8rem;
+    }
+
+    .caption {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .magazine-cover {
+        width: 100%;
+        height: auto;
+    }
+
+    .featured-image {
+        height: 50%;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .headline {
+        font-size: 1.5rem;
+    }
+
+    .caption {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .magazine-cover {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .headline {
+        font-size: 1.3rem;
+    }
+
+    .caption {
+        font-size: 0.8rem;
+    }
+
+    .subscribe-btn {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
